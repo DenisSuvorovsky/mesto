@@ -1,8 +1,14 @@
-.elements__caption_like {
+.elements__like {
     height: 19px;
     width: 22px;
     background-image: url(../../../../images/Like-img.svg);
     background-position: center;
     background-repeat: no-repeat;
     align-self: center;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.elements__like:hover {
+    opacity: 0.5;
 }

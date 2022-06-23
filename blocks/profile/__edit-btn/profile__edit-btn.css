@@ -9,4 +9,10 @@
     background-image: url(../../../images/edit-btn.png);
     margin-left: 18px;
     margin-top: 36px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.profile__edit-btn:hover {
+    opacity: 0.5;
 }

@@ -1,0 +1,6 @@
+.elements__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 18px 0 21px;
+    padding-bottom: 15px;
+}

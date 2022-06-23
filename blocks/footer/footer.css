@@ -1,4 +1,7 @@
 .footer {
     display: flex;
     padding-bottom: 60px;
+    margin: 0 auto;
+    max-width: 880px;
+    width: calc(100% - 400px);
 }

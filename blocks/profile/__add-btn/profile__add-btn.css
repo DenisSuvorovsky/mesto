@@ -9,4 +9,10 @@
     background-position: center;
     align-self: center;
     margin-left: auto;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.profile__add-btn:hover {
+    opacity: 0.5;
 }
