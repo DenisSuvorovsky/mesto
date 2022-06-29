@@ -8,3 +8,10 @@
     justify-content: center;
     padding-bottom: 67px;
 }
+
+@media screen and (max-width: 767px) {
+    .elements {
+        max-width: 320px;
+        grid-template-columns: 1fr;
+    }
+}
