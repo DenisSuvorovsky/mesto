@@ -5,3 +5,12 @@
     max-width: 880px;
     width: calc(100% - 400px);
 }
+
+@media screen and (max-width: 767px) {
+    .footer {  
+        padding-bottom: 36px;
+        margin: 0 auto;
+        max-width: 320px;
+        width: calc(100% - 38px);
+    }   
+}
