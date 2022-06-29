@@ -6,3 +6,12 @@
 }
 
 
+@media screen and (max-width: 767px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 38px);
+    max-width: 320px;
+  }
+  
+}
