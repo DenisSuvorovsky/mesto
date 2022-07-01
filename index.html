@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./pages/index.css"/>
     <title>Mesto</title>
   </head>
   <body class="page">
@@ -32,13 +32,13 @@
             <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
             <p class="profile__job">Исследователь океана</p>
-            <button class="profile__edit-btn"></button>
+            <button type="button" class="profile__edit-btn"></button>
           </div>
           </section>
-          <button class="profile__add-btn"></button>
+          <button type="button" class="profile__add-btn"></button>
         </section>
 
-        <!--main sections with cards-->
+        <!--main section with cards-->
 
         <article class="elements">
           <div class="elements__card">
@@ -49,7 +49,7 @@
             />
             <div class="elements__container">
               <div class="elements__caption">Карачаевск</div>
-              <buttton class="elements__like"></buttton>
+              <buttton type="button" class="elements__like"></buttton>
             </div>
           </div>
           <div class="elements__card">
@@ -120,5 +120,22 @@
         />
       </footer>
     </div>
+
+    <!--pop-up-->
+
+    <div class="popup popup_opended">
+      <div class="popup__container">
+        <button type="button" class="popup__close"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form name="edit-form" action="#" class="popup__form form">
+        <fieldset class="form__set">
+          <input type="text" name="username" class="popup__input">
+          <input type="text" name="job" class="popup__input">
+          <button type="submit" class="form__submit">Сохранить</button>
+        </fieldset>
+      </form>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

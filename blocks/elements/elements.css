@@ -14,5 +14,6 @@
         max-width: 320px;
         grid-template-columns: 1fr;
         padding-bottom: 48px;
+        margin: 0 auto;
     }
 }
