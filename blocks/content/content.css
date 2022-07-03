@@ -1,17 +1,17 @@
 .content {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: calc(100% - 400px);
   max-width: 1280px;
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .content {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 38px);
-    max-width: 320px;
+    width: calc(100% - 32px);
+    align-items: center;
   }
   
 }

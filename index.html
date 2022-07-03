@@ -48,8 +48,8 @@
               alt="Карачаевск"
             />
             <div class="elements__container">
-              <div class="elements__caption">Карачаевск</div>
-              <button type="button" class="elements__like"></button>
+              <p class="elements__caption">Карачаевск</p>
+              <button type="button" class="elements__like elements__like_active"></button>
             </div>
           </div>
           <div class="elements__card">
@@ -59,8 +59,8 @@
               class="elements__image"
             />
             <div class="elements__container">
-              <div class="elements__caption">Гора Эльбрус</div>
-              <button class="elements__like"></button>
+              <p class="elements__caption">Гора Эльбрус</p>
+              <button class="elements__like elements__like_active"></button>
             </div>
           </div>
           <div class="elements__card">
@@ -70,8 +70,8 @@
               class="elements__image"
             />
             <div class="elements__container">
-              <div class="elements__caption">Домбай</div>
-              <button class="elements__like"></button>
+              <p class="elements__caption">Домбай</p>
+              <button class="elements__like elements__like_active"></button>
             </div>
           </div>
           <div class="elements__card">
@@ -81,8 +81,8 @@
               class="elements__image"
             />
             <div class="elements__container">
-              <div class="elements__caption">Дагестан</div>
-              <button class="elements__like"></button>
+              <p class="elements__caption">Дагестан</p>
+              <button class="elements__like elements__like_active"></button>
             </div>
           </div>
           <div class="elements__card">
@@ -92,8 +92,8 @@
               class="elements__image"
             />
             <div class="elements__container">
-              <div class="elements__caption">Карачаево-Черкесия</div>
-              <button class="elements__like"></button>
+              <p class="elements__caption">Карачаево-Черкесия</p>
+              <button class="elements__like elements__like_active"></button>
             </div>
           </div>
           <div class="elements__card">
@@ -103,8 +103,8 @@
               class="elements__image"
             />
             <div class="elements__container">
-              <div class="elements__caption">Гора Эльбрус</div>
-              <button class="elements__like"></button>
+              <p class="elements__caption">Гора Эльбрус</p>
+              <button class="elements__like elements__like_active"></button>
             </div>
           </div>
         </section>
@@ -113,11 +113,7 @@
       <!--footer-->
 
       <footer class="footer">
-        <img
-          class="footer__logo"
-          src="./images/FooterLogo.png"
-          alt="Логотип сайта Mesto"
-        />
+        <p class="footer__copyright">© 2022 Mesto Russia</p>
       </footer>
     </div>
 
@@ -127,15 +123,15 @@
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form name="edit-form" action="#" class="popup__form form">
-          <fieldset class="form__set">
-            <input type="text" id="name" class="popup__input" />
-            <input type="text" id="job" class="popup__input" />
-            <button type="submit" class="form__submit">Сохранить</button>
+        <form name="edit-form" action="#" class="popup__form">
+          <fieldset class="popup__set">
+            <input type="text" id="name" name="input-name" class="popup__input popup__input_name" />
+            <input type="text" id="job" name="input-job" class="popup__input popup__input_job" />
+            <button type="submit" class="popup__submit">Сохранить</button>
           </fieldset>
         </form>
       </div>
     </div>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

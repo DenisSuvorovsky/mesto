@@ -6,7 +6,7 @@
     background-color: black;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../../../images/edit-btn.png);
+    background-image: url(../../../images/edit-btn.svg);
     align-self: center;
     cursor: pointer;
     transition: 0.3s ease-in;
@@ -22,7 +22,7 @@
       height: 18px;
       align-self: auto;
       margin-top: 10px;
-      background-image: url(../../../images/edit-btn2.png);
+      background-size: 7.5px;
     }
     
 }
