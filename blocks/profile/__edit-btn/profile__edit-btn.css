@@ -3,7 +3,7 @@
     height: 24px;
     box-sizing: border-box;
     border: 1px solid #fff;
-    background-color: black;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../../../images/edit-btn.svg);
