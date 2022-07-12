@@ -58,16 +58,16 @@ formElement.addEventListener('submit', formSubmitHandler);
 
 
 //Вывод шаблона карточки на экран
-const renderCard =  () => {
+const addCard =  (item) => {
   const cardTemplate = document.querySelector('.template').content;
-  const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('.true');
+  const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('true');
   const elementsList = document.querySelector('.elements');
-  cardClone.querySelector('.elements__caption').textContent = 'Байкал';
-  cardClone.querySelector('.elements__image').src = 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg';
+  cardClone.querySelector('.elements__caption').textContent = item.name;
+  cardClone.querySelector('.elements__image').src = item.link;
+  cardClone.querySelector('.elements__image').alt =  item.name;
   elementsList.prepend(cardClone);
 }
-renderCard();
 
 initialCards.forEach(function(item) {
-
-})
+  addCard(item);
+});
