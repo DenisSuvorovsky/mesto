@@ -6,12 +6,13 @@ const jobInput = document.querySelector('.popup__input_type_input-job');
 const nameInput = document.querySelector('.popup__input_type_input-name');
 const userName = document.querySelector('.profile__name');
 const userJob = document.querySelector('.profile__job');
-const formElement = document.querySelector('.popup__form');
+const formElement = document.querySelector('.popup__form_type_profile-edit');
 const addNewCardPopup = document.querySelector('.popup_type_new-card');
-const cardName = addNewCardPopup.querySelector('.popup__input_type_card-name');
-const cardSrc = addNewCardPopup.querySelector('.popup__input_type_card-src');
-const addCardForm = addNewCardPopup.querySelector('.popup__form');
+const addCardForm = addNewCardPopup.querySelector('.popup__form_type_add-card');
+const cardName = addCardForm.querySelector('.popup__input_type_card-name');
+const cardSrc = addCardForm.querySelector('.popup__input_type_card-src');
 const popupList = document.querySelectorAll('.popup');
+const likeButton = document.querySelector('.elements__like');
 const initialCards = [
     {
       name: 'Архыз',
@@ -39,19 +40,6 @@ const initialCards = [
     }
   ];
 
- //открытие поп-апа и перенос данных из разметки в форму
- editProfileBtn.addEventListener('click', () => {
-  editProfilePopup.classList.add('popup_opened');
-  nameInput.value = userName.textContent;
-  jobInput.value = userJob.textContent;
-})
-
-
-//закрытие поп-апа
-popupClose.addEventListener('click', () => {editProfilePopup.classList.remove('popup_opened');})
-
-
-//изменение и сохранение данных из поп-апа
 function formSubmitHandler(evt) {
     evt.preventDefault()
     userName.textContent = nameInput.value
@@ -60,8 +48,11 @@ function formSubmitHandler(evt) {
 }
 formElement.addEventListener('submit', formSubmitHandler);
 
+function handleLikeClick(evt) {
+  evt.target.classList.toggle('elements__like_active');
+}
 
-//Вывод шаблона карточки на экран
+
 const renderCards =  (item) => {
   const cardTemplate = document.querySelector('.template').content;
   const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('true');
@@ -70,6 +61,8 @@ const renderCards =  (item) => {
   cardClone.querySelector('.elements__image').src = item.link;
   cardClone.querySelector('.elements__image').alt =  item.name;
   elementsList.prepend(cardClone);
+  const likeButton = cardClone.querySelector('.elements__like');
+  likeButton.addEventListener('click', handleLikeClick);
 }
 
 initialCards.forEach(function(item) {
@@ -87,20 +80,41 @@ popupList.forEach((popup) =>  {
       closePopup(popup);
     }
   })
-})
-
-addProfileBtn.addEventListener('click', () => {
-addNewCardPopup.classList.add('popup_opened');
 });
 
-addCardForm.addEventListener('submit',function (evt) {
-evt.preventDefault();
-addNewCardPopup.classList.remove('popup_opened');
-});
-
-function createNewCard(name, link) {
-  const template = document.querySelector('.template').content;
-  const newElement = template.querySelector('.elements__card').cloneNode('true');
+function addCard () {
+  const cardTemplate = document.querySelector('.template').content;
+  const card = cardTemplate.querySelector('.elements__card').cloneNode('true');
   const elementsList = document.querySelector('.elements');
-  
+  card.querySelector('.elements__caption').textContent = cardName.value;
+  card.querySelector('.elements__image').src = cardSrc.value;
+  card.querySelector('.elements__image').alt = cardName.value;
+  elementsList.prepend(card);
+  const likeButton = card.querySelector('.elements__like');
+  likeButton.addEventListener('click', handleLikeClick);
+  }
+
+
+function addEventListeners() {
+  addProfileBtn.addEventListener('click', () => {
+    addNewCardPopup.classList.add('popup_opened');
+    addCardForm.reset();
+    });
+    
+    addCardForm.addEventListener('submit',(evt) => {     
+        evt.preventDefault();
+        addCard();
+        addNewCardPopup.classList.remove('popup_opened');
+      });
+
+    editProfileBtn.addEventListener('click', () => {
+      editProfilePopup.classList.add('popup_opened');
+      nameInput.value = userName.textContent;
+      jobInput.value = userJob.textContent;
+    })
+      
+    popupClose.addEventListener('click', () => {editProfilePopup.classList.remove('popup_opened');})
+
 }
+
+addEventListeners();
