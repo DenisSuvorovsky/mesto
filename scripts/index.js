@@ -46,6 +46,10 @@ function handleDeleteClick(evt) {
   card.remove();
 }
 
+function handleLikeClick(evt) {
+  evt.target.classList.toggle('elements__like_active');
+}
+
 function formSubmitHandler(evt) {
     evt.preventDefault()
     userName.textContent = nameInput.value
@@ -54,10 +58,17 @@ function formSubmitHandler(evt) {
 }
 formElement.addEventListener('submit', formSubmitHandler);
 
-function handleLikeClick(evt) {
-  evt.target.classList.toggle('elements__like_active');
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
 }
 
+popupList.forEach((popup) =>  {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup__close')) {
+      closePopup(popup);
+    }
+  })
+});
 
 const renderCards =  (item) => {
   const cardTemplate = document.querySelector('.template').content;
@@ -75,19 +86,6 @@ const renderCards =  (item) => {
 
 initialCards.forEach(function(item) {
   renderCards(item);
-});
-
-  
-function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-}
-
-popupList.forEach((popup) =>  {
-  popup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup__close')) {
-      closePopup(popup);
-    }
-  })
 });
 
 function addCard () {
