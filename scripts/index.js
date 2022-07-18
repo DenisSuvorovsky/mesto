@@ -13,6 +13,7 @@ const cardName = addCardForm.querySelector('.popup__input_type_card-name');
 const cardSrc = addCardForm.querySelector('.popup__input_type_card-src');
 const popupList = document.querySelectorAll('.popup');
 const likeButton = document.querySelector('.elements__like');
+const deleteButton = document.querySelectorAll('.elements__delete');
 const initialCards = [
     {
       name: 'Архыз',
@@ -40,6 +41,11 @@ const initialCards = [
     }
   ];
 
+function handleDeleteClick(evt) {
+  const card = evt.target.closest('.elements__card');
+  card.remove();
+}
+
 function formSubmitHandler(evt) {
     evt.preventDefault()
     userName.textContent = nameInput.value
@@ -63,6 +69,8 @@ const renderCards =  (item) => {
   elementsList.prepend(cardClone);
   const likeButton = cardClone.querySelector('.elements__like');
   likeButton.addEventListener('click', handleLikeClick);
+  const deleteButton = cardClone.querySelector('.elements__delete');
+  deleteButton.addEventListener('click', handleDeleteClick);
 }
 
 initialCards.forEach(function(item) {
@@ -92,6 +100,8 @@ function addCard () {
   elementsList.prepend(card);
   const likeButton = card.querySelector('.elements__like');
   likeButton.addEventListener('click', handleLikeClick);
+  const deleteButton = card.querySelector('.elements__delete');
+  deleteButton.addEventListener('click', handleDeleteClick);
   }
 
 
