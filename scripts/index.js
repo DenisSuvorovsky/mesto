@@ -41,6 +41,8 @@ const initialCards = [
     }
   ];
 
+
+
 function handleDeleteClick(evt) {
   const card = evt.target.closest('.elements__card');
   card.remove();
@@ -81,7 +83,15 @@ const renderCards =  (item) => {
   const likeButton = cardClone.querySelector('.elements__like');
   likeButton.addEventListener('click', handleLikeClick);
   const deleteButton = cardClone.querySelector('.elements__delete');
-  deleteButton.addEventListener('click', handleDeleteClick);
+  deleteButton.addEventListener('click', handleDeleteClick);  
+  cardClone.addEventListener('click', () => {
+    const imagePopup = document.querySelector('.popup_type_image');
+    imagePopup.classList.add('popup_opened');
+    const image = imagePopup.querySelector('.popup__img');
+    const caption = imagePopup.querySelector('.popup__caption');
+    image.src = item.link;
+    caption.textContent = item.name;
+  });
 }
 
 initialCards.forEach(function(item) {
@@ -100,6 +110,14 @@ function addCard () {
   likeButton.addEventListener('click', handleLikeClick);
   const deleteButton = card.querySelector('.elements__delete');
   deleteButton.addEventListener('click', handleDeleteClick);
+  card.addEventListener('click', () => {
+    const imagePopup = document.querySelector('.popup_type_image');
+    imagePopup.classList.add('popup_opened');
+    const image = imagePopup.querySelector('.popup__img');
+    const caption = imagePopup.querySelector('.popup__caption');
+    image.src = cardSrc.value;
+    caption.textContent = cardName.value;
+  });
   }
 
 
