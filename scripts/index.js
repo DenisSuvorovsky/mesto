@@ -84,7 +84,7 @@ const renderCards =  (item) => {
   likeButton.addEventListener('click', handleLikeClick);
   const deleteButton = cardClone.querySelector('.elements__delete');
   deleteButton.addEventListener('click', handleDeleteClick);  
-  cardClone.addEventListener('click', () => {
+  cardClone.querySelector('.elements__image').addEventListener('click', () => {
     const imagePopup = document.querySelector('.popup_type_image');
     imagePopup.classList.add('popup_opened');
     const image = imagePopup.querySelector('.popup__img');
@@ -110,7 +110,7 @@ function addCard () {
   likeButton.addEventListener('click', handleLikeClick);
   const deleteButton = card.querySelector('.elements__delete');
   deleteButton.addEventListener('click', handleDeleteClick);
-  card.addEventListener('click', () => {
+  card.querySelector('.elements__image').addEventListener('click', () => {
     const imagePopup = document.querySelector('.popup_type_image');
     imagePopup.classList.add('popup_opened');
     const image = imagePopup.querySelector('.popup__img');
