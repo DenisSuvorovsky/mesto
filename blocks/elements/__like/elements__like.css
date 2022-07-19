@@ -1,7 +1,7 @@
 .elements__like {
     min-height: 19px;
     width: 22px;
-    background-image: url(../../../../images/Like-img.svg);
+    background-image: url(../../../images/Like-img.svg);
     background-position: center;
     background-repeat: no-repeat;
     align-self: center;
