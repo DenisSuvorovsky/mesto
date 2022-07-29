@@ -13,6 +13,7 @@ const cardName = addCardForm.querySelector('.popup__input_type_card-name');
 const cardSrc = addCardForm.querySelector('.popup__input_type_card-src');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
+const imagePopup = document.querySelector('.popup_type_image');
 const initialCards = [
   {
     name: 'Архыз',
@@ -89,12 +90,11 @@ popupList.forEach((popup) =>  {
   deleteButton.addEventListener('click', handleDeleteClick);
   likeButton.addEventListener('click', handleLikeClick);
   cardImage.addEventListener('click', () => {
-    const imagePopup = document.querySelector('.popup_type_image');
     const image = imagePopup.querySelector('.popup__img');
     const caption = imagePopup.querySelector('.popup__caption');
+    caption.textContent = name;
+    image.src = link;
     openPopup(imagePopup);
-    image.src = cardSrc.textContent;
-    caption.textContent = cardName.textContent;
   });
     return cardClone;
   };
