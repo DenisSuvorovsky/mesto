@@ -40,8 +40,7 @@
 
         <!--section with cards-->
 
-        <section class="elements">
-        </section>
+        <section class="elements"></section>
       </main>
 
       <!--footer-->
@@ -51,55 +50,86 @@
       </footer>
     </div>
 
-    <!--pop-up-->
+    <!--PopUp type edit-->
 
     <div class="popup popup_type_edit">
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form name="edit-form" action="#" class="popup__form popup__form_type_profile-edit">
+        <form
+          name="edit-form"
+          action="#"
+          class="popup__form popup__form_type_profile-edit"
+        >
           <fieldset class="popup__set">
-            <input type="text" id="name" name="input-name" class="popup__input popup__input_type_input-name" />
-            <input type="text" id="job" name="input-job" class="popup__input popup__input_type_input-job" />
+            <input
+              type="text"
+              id="name"
+              name="input-name"
+              class="popup__input popup__input_type_input-name"
+            />
+            <input
+              type="text"
+              id="job"
+              name="input-job"
+              class="popup__input popup__input_type_input-job"
+            />
             <button type="submit" class="popup__submit">Сохранить</button>
           </fieldset>
         </form>
       </div>
     </div>
+
+    <!--PopUp type new-card-->
 
     <div class="popup popup_type_new-card">
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Новое место</h3>
-        <form name="edit-form" action="#" class="popup__form popup__form_type_add-card">
+        <form
+          name="edit-form"
+          action="#"
+          class="popup__form popup__form_type_add-card"
+        >
           <fieldset class="popup__set">
-            <input type="text" id="card-name" name="input-new-card-name" class="popup__input popup__input_type_card-name"/>
-            <input type="text" id="card-src" name="input-card-src"  class="popup__input popup__input_type_card-src"/>
+            <input
+              type="text"
+              id="card-name"
+              name="input-new-card-name"
+              class="popup__input popup__input_type_card-name"
+              placeholder="Название"
+            />
+            <input
+              type="text"
+              id="card-src"
+              name="input-card-src"
+              class="popup__input popup__input_type_card-src"
+              placeholder="Ссылка на картинку"
+            />
             <button type="submit" class="popup__submit">Сохранить</button>
           </fieldset>
         </form>
       </div>
     </div>
 
+    <!--PopUp type image-->
+
     <div class="popup popup_type_image">
       <div class="popup__img-container">
         <button type="button" class="popup__close"></button>
         <figure class="popup__figure">
-          <img src="#" alt="#" class="popup__img">
+          <img src="#" alt="#" class="popup__img" />
           <figcaption class="popup__caption"></figcaption>
         </figure>
       </div>
     </div>
 
+    <!--Card Template-->
 
     <template class="template">
       <div class="elements__card">
         <button type="button" class="elements__delete"></button>
-        <img
-          class="elements__image"
-          src='#'
-          alt='#'
-        />
+        <img class="elements__image" src="#" alt="#" />
         <div class="elements__container">
           <p class="elements__caption"></p>
           <button type="button" class="elements__like"></button>
@@ -109,5 +139,7 @@
 
     
     <script src="./scripts/index.js"></script>
+
+
   </body>
 </html>

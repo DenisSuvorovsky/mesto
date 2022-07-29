@@ -7,9 +7,9 @@
 
 @media screen and (max-width: 1120px) {
   .content {
-      width: calc(100% - 200px);
+    width: calc(100% - 200px);
   }
-  }
+}
 
 @media screen and (max-width: 767px) {
   .content {
@@ -18,6 +18,4 @@
     width: calc(100% - 32px);
     align-items: center;
   }
-  
 }
-

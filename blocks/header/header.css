@@ -24,19 +24,16 @@
   .header::after {
     padding-top: 30px;
   }
-
 }
-
 
 @media screen and (max-width: 1120px) {
   .header {
-      width: calc(100% - 200px);
+    width: calc(100% - 200px);
   }
-  }
+}
 
-  
 @media screen and (max-width: 425px) {
   .header {
-      width: 100%;
+    width: 100%;
   }
-  }
+}

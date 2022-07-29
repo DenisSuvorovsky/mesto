@@ -1,8 +1,8 @@
-.page__wrapper{
+.page__wrapper {
   margin: auto;
   max-width: 1280px;
   background: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+};
