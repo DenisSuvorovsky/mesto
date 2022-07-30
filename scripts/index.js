@@ -14,6 +14,8 @@ const cardSrc = addCardForm.querySelector('.popup__input_type_card-src');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
 const imagePopup = document.querySelector('.popup_type_image');
+const image = imagePopup.querySelector('.popup__img');
+const caption = imagePopup.querySelector('.popup__caption');
 const initialCards = [
   {
     name: 'Архыз',
@@ -56,7 +58,7 @@ function handleSubmitProfileEditForm(evt) {
     evt.preventDefault()
     userName.textContent = nameInput.value
     userJob.textContent = jobInput.value
-    editProfilePopup.classList.remove('popup_opened')
+    closePopup(editProfilePopup);
 }
 editProfileForm.addEventListener('submit', handleSubmitProfileEditForm);
 
@@ -90,10 +92,9 @@ popupList.forEach((popup) =>  {
   deleteButton.addEventListener('click', handleDeleteClick);
   likeButton.addEventListener('click', handleLikeClick);
   cardImage.addEventListener('click', () => {
-    const image = imagePopup.querySelector('.popup__img');
-    const caption = imagePopup.querySelector('.popup__caption');
     caption.textContent = name;
     image.src = link;
+    image.alt = name;
     openPopup(imagePopup);
   });
     return cardClone;
@@ -107,7 +108,6 @@ function addCard (name, link) {
 
 //Вывод карточек из начального массива на страницу
 initialCards.forEach(function(item){
-  createCard(item.name, item.link);
   addCard(item.name, item.link);
 });
 
