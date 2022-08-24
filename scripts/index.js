@@ -35,9 +35,11 @@ function handleSubmitProfileEditForm(evt) {
 }
 editProfileForm.addEventListener('submit', handleSubmitProfileEditForm);
 
+
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-}
+};
+
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -71,13 +73,13 @@ popupList.forEach((popup) =>  {
     openPopup(imagePopup);
   });
     return cardClone;
-  };
+  }
 
 //Вставляем карточку с разметкой в начало списка карточек
 function addCard (name, link) {
   const newCard = createCard(name, link);
   elementsList.prepend(newCard);
-};
+}
 
 //Вывод карточек из начального массива на страницу
 initialCards.forEach(function(item){
@@ -97,6 +99,7 @@ initialCards.forEach(function(item){
           evt.preventDefault();
           addCard(cardName.value, cardSrc.value);
           closePopup(addNewCardPopup);
+          handleClosePopup(addNewCardPopup);
         });
 
       editProfileBtn.addEventListener('click', () => {
@@ -104,7 +107,8 @@ initialCards.forEach(function(item){
         nameInput.value = userName.textContent;
         jobInput.value = userJob.textContent;
       })
-        }
+
+        };
   
   addEventListeners();
 
