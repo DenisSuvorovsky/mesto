@@ -65,18 +65,18 @@
           <fieldset class="popup__set">
             <input
               type="text"
-              id="userName"
+              id="username"
               name="inputProfileName"
-              class="name-input-error popup__input popup__input_type_input-name"
+              class="popup__input popup__input_type_input-name"
               required
               minlength="2"
               maxlength="40"
               placeholder="Имя"
             />
-            <span class="popup__input-error">Вы пропустили это поле</span>
+            <span id="username-error" class="popup__input-error"></span>
             <input
               type="text"
-              id="userProfileJob"
+              id="description"
               name="inputProfileJob"
               class="popup__input popup__input_type_input-job"
               required
@@ -84,10 +84,8 @@
               maxlength="200"
               placeholder="О себе"
             />
-            <span class="job-input-error popup__input-error"
-              >Вы пропустили это поле</span
-            >
-            <button type="submit" class="popup__submit">Сохранить</button>
+            <span id="description-error" class="job-input-error popup__input-error"></span>
+            <button type="submit" class="popup__submit popup__submit_disabled" >Сохранить</button>
           </fieldset>
         </form>
       </div>
@@ -114,26 +112,24 @@
               placeholder="Название"
               minlength="2"
               maxlength="30"
-              class="popup__input popup__input-error_active"
+              class="popup__input"
               required
             />
             <span
-              class="card-name-input-error popup__input-error form__input-error_active"
-              >Вы пропустили это поле</span
-            >
+              id="cardName-error"
+              class="cardName-error popup__input-error"></span>
             <input
               type="url"
               id="cardLink"
               name="inputCardSrc"
-              class="popup__input popup__input_type_card-src popup__input-error_active"
+              class="popup__input popup__input_type_card-srс"
               placeholder="Ссылка на картинку"
               required
             />
             <span
-              class="card-link-input-error popup__input-error form__input-error_active"
-              >Вы пропустили это поле</span
-            >
-            <button type="submit" class="popup__submit">Сохранить</button>
+              id="cardLink-error"
+              class="card-link-input-error popup__input-error"></span>
+            <button type="submit" class="popup__submit popup__submit_disabled" disabled>Сохранить</button>
           </fieldset>
         </form>
       </div>
@@ -165,7 +161,7 @@
     </template>
 
     <script src="./scripts/validate.js"></script>
-    <script src="./scripts/initical-cards.js"></script>
+    <script src="scripts/initial-cards.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

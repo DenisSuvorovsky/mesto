@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__submit/_disabled/popup__submit_disabled.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/_active/popup__input-error_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-btn/profile__add-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-btn/profile__add-btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-btn/profile__edit-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-btn/profile__edit-btn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/initical-cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/initial-cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/dev/mesto",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/dev/mesto&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mesto/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -71,7 +79,13 @@
       <workItem from="1660701277264" duration="1259000" />
       <workItem from="1660742739155" duration="598000" />
       <workItem from="1661365818553" duration="1921000" />
-      <workItem from="1661382524107" duration="995000" />
+      <workItem from="1661382524107" duration="1151000" />
+      <workItem from="1661511191600" duration="1360000" />
+      <workItem from="1661542554421" duration="1000" />
+      <workItem from="1661894140164" duration="5774000" />
+      <workItem from="1662051803852" duration="1270000" />
+      <workItem from="1662061372830" duration="2307000" />
+      <workItem from="1662127002165" duration="11513000" />
     </task>
     <servers />
   </component>

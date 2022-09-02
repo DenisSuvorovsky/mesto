@@ -47,7 +47,7 @@ function openPopup(popup) {
 
 popupList.forEach((popup) =>  {
   popup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup__close')) {
+    if (evt.target.classList.contains('popup__close-button')) {
       closePopup(popup);
     }
   })
