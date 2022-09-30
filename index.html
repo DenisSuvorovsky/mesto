@@ -63,6 +63,7 @@
           novalidate
         >
           <fieldset class="popup__set">
+            <label for="username">
             <input
               type="text"
               id="username"
@@ -73,7 +74,9 @@
               maxlength="40"
               placeholder="Имя"
             />
-            <span id="username-error" class="popup__input-error"></span>
+              <span class="username-error popup__input-error"></span>
+            </label>
+            <label for="description">
             <input
               type="text"
               id="description"
@@ -84,8 +87,9 @@
               maxlength="200"
               placeholder="О себе"
             />
-            <span id="description-error" class="job-input-error popup__input-error"></span>
-            <button type="submit" class="popup__submit popup__submit_disabled">Сохранить</button>
+              <span class="description-error popup__input-error"></span>
+            </label>
+            <button type="submit" class="popup__submit">Сохранить</button>
           </fieldset>
         </form>
       </div>
@@ -104,6 +108,7 @@
           novalidate
         >
           <fieldset class="popup__set">
+            <label for="cardName">
             <input
               type="text"
               id="cardName"
@@ -114,10 +119,9 @@
               maxlength="30"
               class="popup__input"
               required
-            />
-            <span
-              id="cardName-error"
-              class="cardName-error popup__input-error"></span>
+            /><span
+                class="cardName-error popup__input-error"></span></label>
+            <label for="cardLink">
             <input
               type="url"
               id="cardLink"
@@ -125,11 +129,10 @@
               class="popup__input popup__input_type_card-srс"
               placeholder="Ссылка на картинку"
               required
-            />
-            <span
-              id="cardLink-error"
-              class="card-link-input-error popup__input-error"></span>
-            <button type="submit" class="popup__submit popup__submit_disabled" >Сохранить</button>
+            /><span class="inputCardSrc-error popup__input-error">
+            </span>
+            </label>
+            <button type="submit" class="popup__submit" >Сохранить</button>
           </fieldset>
         </form>
       </div>
