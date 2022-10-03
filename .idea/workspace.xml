@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="&quot;hotfix: delete .idea folder&quot;">
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/_active/popup__input-error_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input-error/_active/popup__input-error_active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +97,13 @@
       <workItem from="1664461415913" duration="1851000" />
       <workItem from="1664536291274" duration="7460000" />
       <workItem from="1664554162958" duration="810000" />
+      <workItem from="1664579100746" duration="221000" />
+      <workItem from="1664579398099" duration="1195000" />
+      <workItem from="1664668604747" duration="2041000" />
+      <workItem from="1664724451756" duration="1351000" />
+      <workItem from="1664729444055" duration="6204000" />
+      <workItem from="1664750090459" duration="201000" />
+      <workItem from="1664750821282" duration="2957000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;hotfix: delete .idea folder&quot;">
       <created>1663181015943</created>
