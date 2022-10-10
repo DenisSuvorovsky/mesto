@@ -1,10 +1,12 @@
- const showInputError = (formSelector, inputSelector, config) => {
+//Показываем ошибки
+const showInputError = (formSelector, inputSelector, config) => {
      const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
      //inputSelector.classList.add(config.inputErrorClass);
      errorElement.textContent = inputSelector.validationMessage;
      errorElement.classList.add(config.errorClass);
  };
 
+//Удаляем ошибки
  const hideInputError = (formSelector, inputSelector, config) => {
      const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
      //inputSelector.classList.remove(config.inputErrorClass);
@@ -12,6 +14,7 @@
      errorElement.textContent = '';
  };
 
+ //Провереяем инпуты и показываем ошибки
  const checkInputValidity = (formSelector, inputSelector, config) => {
      if (!inputSelector.validity.valid) {
          showInputError(formSelector, inputSelector, config);
@@ -20,14 +23,15 @@
      }
  };
 
- const hasInvalidInput = (inputList, ) => {
-     return inputList.some((inputSelector) => {
-         return !inputSelector.validity.valid
+ //Находим невалидное поле
+ const hasInvalidInput = (inputList) => {
+        return inputList.some((inputSelector) => {
+          return (!inputSelector.validity.valid);
      });
  };
 
- const toggleButtonState = (inputLust, buttonElement, config) => {
-     const inputList = Array.from(document.querySelectorAll(config.inputSelector));
+ //Меняем состояние кнопки в зависимости от валидности полей
+ const toggleButtonState = (inputList, buttonElement, config) => {
      if (hasInvalidInput(inputList)) {
          buttonElement.classList.add(config.inactiveButtonClass);
          buttonElement.setAttribute('disabled', true);
@@ -38,7 +42,7 @@
  };
 
  const setEventListeners = (formSelector, config) => {
-     const inputList = formSelector.querySelectorAll(config.inputSelector);
+     const inputList = Array.from(formSelector.querySelectorAll(config.inputSelector));
      const buttonElement = formSelector.querySelector(config.submitButtonSelector);
      toggleButtonState(inputList, buttonElement, config);
      inputList.forEach((inputSelector) => {
