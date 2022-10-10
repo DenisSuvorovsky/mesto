@@ -38,7 +38,7 @@ editProfileForm.addEventListener('submit', handleSubmitProfileEditForm);
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-};
+}
 
 
 function openPopup(popup) {
@@ -108,7 +108,7 @@ initialCards.forEach(function(item){
         jobInput.value = userJob.textContent;
       })
 
-        };
+        }
   
   addEventListeners();
 
