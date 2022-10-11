@@ -56,6 +56,16 @@ popupList.forEach((popup) =>  {
   })
 });
 
+//Закрытие поп-апа кликом на оверлей
+popupList.forEach((popup) => {
+    document.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup);
+        }
+    });
+});
+
+//Закрытие поп-апа кликом на Esc
 
 
 //Возвращаем готовую разметку

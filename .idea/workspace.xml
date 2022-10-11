@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="&quot;dev: добавить валидацию на формы&quot;">
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +114,7 @@
       <workItem from="1665432899319" duration="2226000" />
       <workItem from="1665448249365" duration="1948000" />
       <workItem from="1665496826943" duration="2069000" />
+      <workItem from="1665520955795" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;hotfix: delete .idea folder&quot;">
       <created>1663181015943</created>
