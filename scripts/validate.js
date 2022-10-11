@@ -41,6 +41,7 @@ const showInputError = (formSelector, inputSelector, config) => {
      }
  };
 
+//Вешаем обработчики событий на список инпутов
  const setEventListeners = (formSelector, config) => {
      const inputList = Array.from(formSelector.querySelectorAll(config.inputSelector));
      const buttonElement = formSelector.querySelector(config.submitButtonSelector);
@@ -53,9 +54,11 @@ const showInputError = (formSelector, inputSelector, config) => {
      });
  };
 
+ //Включаем валидацию
  const enableValidation = (config) => {
      const fieldsetList = Array.from(document.querySelectorAll(config.fieldsetSelector));
      const formList = Array.from(document.querySelectorAll((config.formSelector)));
+     //В каждой форме включаем обработчики событий
      formList.forEach((formSelector) => {
          formSelector.addEventListener('submit', (evt) => {
              evt.preventDefault();

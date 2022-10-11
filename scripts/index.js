@@ -17,16 +17,18 @@ const imagePopup = document.querySelector('.popup_type_image');
 const image = imagePopup.querySelector('.popup__img');
 const caption = imagePopup.querySelector('.popup__caption');
 
-
+//Удаление карточки
 function handleDeleteClick(evt) {
   const card = evt.target.closest('.elements__card');
   card.remove();
 }
 
+//Добавление/удаление лайка
 function handleLikeClick(evt) {
   evt.target.classList.toggle('elements__like_active');
 }
 
+//
 function handleSubmitProfileEditForm(evt) {
     evt.preventDefault()
     userName.textContent = nameInput.value
@@ -35,16 +37,17 @@ function handleSubmitProfileEditForm(evt) {
 }
 editProfileForm.addEventListener('submit', handleSubmitProfileEditForm);
 
-
+//Закрытие поп-апа
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
 
-
+//Открытие поп-апа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
 
+//Закрытие поп-апа нажатием на кнопку закрытия
 popupList.forEach((popup) =>  {
   popup.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('popup__close-button')) {
@@ -53,8 +56,9 @@ popupList.forEach((popup) =>  {
   })
 });
 
-//Возвращаем готовую разметку
 
+
+//Возвращаем готовую разметку
  function createCard(name, link) {
   const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('true');
   const cardImage = cardClone.querySelector('.elements__image');
@@ -86,8 +90,6 @@ initialCards.forEach(function(item){
   addCard(item.name, item.link);
 });
 
-
-  
 //Обработчики событий
   function addEventListeners() {
     addProfileBtn.addEventListener('click', () => {

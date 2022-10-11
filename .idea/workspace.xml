@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="&quot;dev: добавить сообщение об ошибке, изменить состояние submit кнопки&quot;">
+    <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="&quot;dev: добавить валидацию на формы&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/_active/popup__input-error_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input-error/_active/popup__input-error_active.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__submit/popup__submit.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +116,8 @@
       <workItem from="1665172418967" duration="474000" />
       <workItem from="1665354007259" duration="8486000" />
       <workItem from="1665393003251" duration="10745000" />
-      <workItem from="1665432899319" duration="308000" />
+      <workItem from="1665432899319" duration="2226000" />
+      <workItem from="1665448249365" duration="1948000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;hotfix: delete .idea folder&quot;">
       <created>1663181015943</created>
@@ -153,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665362656662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;dev: добавить валидацию на формы&quot;">
+      <created>1665433223031</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665433223031</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +183,7 @@
     <MESSAGE value="&quot;hotfix: delete .idea folder&quot;" />
     <MESSAGE value="&quot;dev: изменить значения в функциях validate.js&quot;" />
     <MESSAGE value="&quot;dev: добавить сообщение об ошибке, изменить состояние submit кнопки&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;dev: добавить сообщение об ошибке, изменить состояние submit кнопки&quot;" />
+    <MESSAGE value="&quot;dev: добавить валидацию на формы&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;dev: добавить валидацию на формы&quot;" />
   </component>
 </project>
