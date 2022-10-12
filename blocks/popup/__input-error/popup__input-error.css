@@ -3,7 +3,7 @@
     color: red;
     display: block;
     font-size: 12px;
-    width: 356px;
+    max-width: 356px;
     padding: 5px 0 0;
     position: absolute;
 }

@@ -19,41 +19,41 @@ const caption = imagePopup.querySelector('.popup__caption');
 
 //Удаление карточки
 function handleDeleteClick(evt) {
-  const card = evt.target.closest('.elements__card');
-  card.remove();
+    const card = evt.target.closest('.elements__card');
+    card.remove();
 }
 
 //Добавление/удаление лайка
 function handleLikeClick(evt) {
-  evt.target.classList.toggle('elements__like_active');
+    evt.target.classList.toggle('elements__like_active');
 }
 
 //
 function handleSubmitProfileEditForm(evt) {
-    evt.preventDefault()
-    userName.textContent = nameInput.value
-    userJob.textContent = jobInput.value
+    evt.preventDefault();
+    userName.textContent = nameInput.value;
+    userJob.textContent = jobInput.value;
     closePopup(editProfilePopup);
 }
 editProfileForm.addEventListener('submit', handleSubmitProfileEditForm);
 
 //Закрытие поп-апа
 function closePopup(popup) {
-  popup.classList.remove('popup_opened');
+    popup.classList.remove('popup_opened');
 }
 
 //Открытие поп-апа
 function openPopup(popup) {
-  popup.classList.add('popup_opened');
+    popup.classList.add('popup_opened');
 }
 
 //Закрытие поп-апа нажатием на кнопку закрытия
-popupList.forEach((popup) =>  {
-  popup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup__close-button')) {
-      closePopup(popup);
-    }
-  })
+popupList.forEach((popup) => {
+    popup.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('popup__close-button')) {
+            closePopup(popup);
+        }
+    });
 });
 
 //Закрытие поп-апа кликом на оверлей
@@ -71,62 +71,61 @@ popupList.forEach((popup) => {
         if (evt.keyCode == 27) {
             closePopup(popup);
         }
-    })
-})
+    });
+});
 
 //Возвращаем готовую разметку
- function createCard(name, link) {
-  const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('true');
-  const cardImage = cardClone.querySelector('.elements__image');
-  const likeButton = cardClone.querySelector('.elements__like');
-  const deleteButton = cardClone.querySelector('.elements__delete');
-  const cardCaption = cardClone.querySelector('.elements__caption');
-  cardCaption.textContent = name;
-  cardImage.src = link;
-  cardImage.alt = name;
-  deleteButton.addEventListener('click', handleDeleteClick);
-  likeButton.addEventListener('click', handleLikeClick);
-  cardImage.addEventListener('click', () => {
-    caption.textContent = name;
-    image.src = link;
-    image.alt = name;
-    openPopup(imagePopup);
-  });
+function createCard(name, link) {
+    const cardClone = cardTemplate.querySelector('.elements__card').cloneNode('true');
+    const cardImage = cardClone.querySelector('.elements__image');
+    const likeButton = cardClone.querySelector('.elements__like');
+    const deleteButton = cardClone.querySelector('.elements__delete');
+    const cardCaption = cardClone.querySelector('.elements__caption');
+    cardCaption.textContent = name;
+    cardImage.src = link;
+    cardImage.alt = name;
+    deleteButton.addEventListener('click', handleDeleteClick);
+    likeButton.addEventListener('click', handleLikeClick);
+    cardImage.addEventListener('click', () => {
+        caption.textContent = name;
+        image.src = link;
+        image.alt = name;
+        openPopup(imagePopup);
+    });
     return cardClone;
-  }
+}
 
 //Вставляем карточку с разметкой в начало списка карточек
-function addCard (name, link) {
-  const newCard = createCard(name, link);
-  elementsList.prepend(newCard);
+function addCard(name, link) {
+    const newCard = createCard(name, link);
+    elementsList.prepend(newCard);
 }
 
 //Вывод карточек из начального массива на страницу
-initialCards.forEach(function(item){
-  addCard(item.name, item.link);
+initialCards.forEach(function(item) {
+    addCard(item.name, item.link);
 });
 
 //Обработчики событий
-  function addEventListeners() {
+function addEventListeners() {
     addProfileBtn.addEventListener('click', () => {
-      openPopup(addNewCardPopup);
-      addCardForm.reset();
-      });
-      
-      addCardForm.addEventListener('submit',(evt) => {     
-          evt.preventDefault();
-          addCard(cardName.value, cardSrc.value);
-          closePopup(addNewCardPopup);
-          //handleClosePopup(addNewCardPopup);
-        });
+        openPopup(addNewCardPopup);
+        addCardForm.reset();
+    });
 
-      editProfileBtn.addEventListener('click', () => {
+    addCardForm.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        addCard(cardName.value, cardSrc.value);
+        closePopup(addNewCardPopup);
+        //handleClosePopup(addNewCardPopup);
+    });
+
+    editProfileBtn.addEventListener('click', () => {
         openPopup(editProfilePopup);
         nameInput.value = userName.textContent;
         jobInput.value = userJob.textContent;
-      })
+    });
 
-        }
-  
-  addEventListeners();
+}
 
+addEventListeners();

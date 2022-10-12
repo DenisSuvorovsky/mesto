@@ -70,6 +70,7 @@ const showInputError = (formSelector, inputSelector, config) => {
      });
  };
 
+//Передаем параметры для работы валидации
  enableValidation({
      fieldsetSelector: '.popup__set',
      formSelector: '.popup__form',
