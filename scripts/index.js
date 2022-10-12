@@ -66,7 +66,13 @@ popupList.forEach((popup) => {
 });
 
 //Закрытие поп-апа кликом на Esc
-
+popupList.forEach((popup) => {
+    document.addEventListener('keydown', (evt) => {
+        if (evt.keyCode == 27) {
+            closePopup(popup);
+        }
+    })
+})
 
 //Возвращаем готовую разметку
  function createCard(name, link) {
