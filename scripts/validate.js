@@ -55,7 +55,7 @@ const showInputError = (formSelector, inputSelector, config) => {
  };
 
  //Включаем валидацию
- const enableValidation = (config) => {
+ const validationConfig = (config) => {
      const fieldsetList = Array.from(document.querySelectorAll(config.fieldsetSelector));
      const formList = Array.from(document.querySelectorAll((config.formSelector)));
      //В каждой форме включаем обработчики событий
@@ -71,7 +71,7 @@ const showInputError = (formSelector, inputSelector, config) => {
  };
 
 //Передаем параметры для работы валидации
- enableValidation({
+validationConfig({
      fieldsetSelector: '.popup__set',
      formSelector: '.popup__form',
      inputSelector: '.popup__input',
