@@ -37,39 +37,45 @@ function handleSubmitProfileEditForm(evt) {
 }
 formEditProfile.addEventListener('submit', handleSubmitProfileEditForm);
 
-//Закрытие поп-апа
-function closePopup(popup) {
-    popup.classList.remove('popup_opened');
-
-}
-
 //Открытие поп-апа
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closeByEscBtn)
+}
+
+//Закрытие поп-апа
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closeByEscBtn)
 }
 
 //Закрытие поп-апа нажатием на кнопку и кликом на оверлей
 popupList.forEach((popup) => {
     popup.addEventListener('mousedown', (evt) => {
         if (evt.target.classList.contains('popup_opened')) {
-            closePopup(popup)
-            closeByEsc(evt);
+            closePopup(popup);
         }
         if (evt.target.classList.contains('popup__close-button')) {
-            closePopup(popup)
-            closeByEsc(evt);
+            closePopup(popup);
         }
     });
 });
 
+function closeByEscBtn(evt) {
+    if (evt.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup);
+    }
+}
+
 //Закрытие поп-апа кликом на Esc
-popupList.forEach((popup) => {
-    document.addEventListener('keydown', (evt) => {
-        if (evt.key === 'Escape') {
-            closePopup(popup);
-        }
-    })
-})
+//popupList.forEach((popup) => {
+//    document.addEventListener('keydown', (evt) => {
+//        if (evt.key === 'Escape') {
+//            closePopup(popup);
+//        }
+//    })
+//})
 
 //Возвращаем готовую разметку
 function createCard(name, link) {

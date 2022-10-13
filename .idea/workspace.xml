@@ -4,7 +4,6 @@
     <list default="true" id="2dd34627-bca0-4882-96ca-b8444f990296" name="Changes" comment="&quot;hotfix&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,7 @@
       <workItem from="1665520955795" duration="1193000" />
       <workItem from="1665577942155" duration="2280000" />
       <workItem from="1665584164201" duration="5351000" />
-      <workItem from="1665600962129" duration="5410000" />
+      <workItem from="1665600962129" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;hotfix: delete .idea folder&quot;">
       <created>1663181015943</created>
@@ -198,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665599760831</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&quot;hotfix&quot;">
+      <created>1665621550033</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665621550033</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
