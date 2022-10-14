@@ -60,8 +60,7 @@ const showInputError = (formSelector, inputSelector, config) => {
      const formList = Array.from(document.querySelectorAll((config.formSelector)));
      //В каждой форме включаем обработчики событий
      formList.forEach((formSelector) => {
-         formSelector.addEventListener('submit', (evt) => {
-             evt.preventDefault();
+         formSelector.addEventListener('submit', () => {
              setEventListeners(formSelector, config);
          });
          fieldsetList.forEach((fieldset) => {

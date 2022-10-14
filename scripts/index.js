@@ -28,7 +28,7 @@ function handleLikeClick(evt) {
     evt.target.classList.toggle('elements__like_active');
 }
 
-//
+//Изменение данных пользователя
 function handleSubmitProfileEditForm(evt) {
     evt.preventDefault();
     userName.textContent = nameInput.value;
@@ -40,13 +40,13 @@ formEditProfile.addEventListener('submit', handleSubmitProfileEditForm);
 //Открытие поп-апа
 function openPopup(popup) {
     popup.classList.add('popup_opened');
-    document.addEventListener('keydown', closeByEscBtn)
+    document.addEventListener('keydown', closeByEscBtn);
 }
 
 //Закрытие поп-апа
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
-    document.removeEventListener('keydown', closeByEscBtn)
+    document.removeEventListener('keydown', closeByEscBtn);
 }
 
 //Закрытие поп-апа нажатием на кнопку и кликом на оверлей
@@ -61,21 +61,13 @@ popupList.forEach((popup) => {
     });
 });
 
+//Закрытие поп-апа нажатием на Esc
 function closeByEscBtn(evt) {
     if (evt.key === 'Escape') {
         const openedPopup = document.querySelector('.popup_opened');
         closePopup(openedPopup);
     }
 }
-
-//Закрытие поп-апа кликом на Esc
-//popupList.forEach((popup) => {
-//    document.addEventListener('keydown', (evt) => {
-//        if (evt.key === 'Escape') {
-//            closePopup(popup);
-//        }
-//    })
-//})
 
 //Возвращаем готовую разметку
 function createCard(name, link) {
