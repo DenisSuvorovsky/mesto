@@ -112,6 +112,7 @@ function addEventListeners() {
         evt.preventDefault();
         addCard(cardName.value, cardSrc.value);
         closePopup(popupAddNewCard);
+        formAddCard.reset();
     });
 
     profileEditBtn.addEventListener('click', () => {

@@ -1,7 +1,6 @@
 //Показываем ошибки
 const showInputError = (formSelector, inputSelector, config) => {
      const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
-     //inputSelector.classList.add(config.inputErrorClass);
      errorElement.textContent = inputSelector.validationMessage;
      errorElement.classList.add(config.errorClass);
  };
@@ -9,7 +8,6 @@ const showInputError = (formSelector, inputSelector, config) => {
 //Удаляем ошибки
  const hideInputError = (formSelector, inputSelector, config) => {
      const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
-     //inputSelector.classList.remove(config.inputErrorClass);
      errorElement.classList.remove(config.errorClass);
      errorElement.textContent = '';
  };
