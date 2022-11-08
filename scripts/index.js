@@ -18,15 +18,15 @@ const image = imagePopup.querySelector('.popup__img');
 const caption = imagePopup.querySelector('.popup__caption');
 
 //Удаление карточки
-function handleDeleteClick(evt) {
-    const card = evt.target.closest('.elements__card');
-    card.remove();
-}
+//unction handleDeleteClick(evt) {
+//   const card = evt.target.closest('.elements__card');
+//   card.remove();
+//
 
 //Добавление/удаление лайка
-function handleLikeClick(evt) {
-    evt.target.classList.toggle('elements__like_active');
-}
+//function handleLikeClick(evt) {
+//    evt.target.classList.toggle('elements__like_active');
+//}
 
 //Изменение данных пользователя
 function handleSubmitProfileEditForm(evt) {
