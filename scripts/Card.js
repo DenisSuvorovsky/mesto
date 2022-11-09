@@ -25,7 +25,7 @@ const initialCards = [
     }
   ];
 
-
+const popupElement = document.querySelectorAll('.popup');
 //Конструктор шаблона карточки
 class Card {
     constructor (data, templateSelector) {
@@ -45,7 +45,7 @@ class Card {
         return template;
     }
 
-    _openPopup(popup) {
+    _openPopup() {
       popup.classList.add('popup_opened');
       document.addEventListener('keydown', closeByEscBtn);
   }
@@ -61,10 +61,15 @@ class Card {
         closePopup(openedPopup);
     }
   }
-    //
-    _setEventListeners() {
-      
-    }
+
+  _handleLikeClick(evt) {
+    const like = this._element.querySelector('.elements__like');
+    like.classList.toggle('elements__like_active');
+  }
+
+  _setEventListeners(){
+    this._element.querySelector('.elements__like').addEventListener('click', this._handleLikeClick);
+  }
     
     //Создание карточки
     generateCard() {
