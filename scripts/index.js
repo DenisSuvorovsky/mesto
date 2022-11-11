@@ -22,6 +22,17 @@ class Popup {
         this._name = data.name;
         this._selector = selector;
     }
+
+    
+    _openPopup() {
+        popup.classList.add('popup_opened');
+        document.addEventListener('keydown', closeByEscBtn);
+    }
+  
+      _closePopup(popup) {
+        popup.classList.remove('popup_opened');
+        document.removeEventListener('keydown', closeByEscBtn);
+  }
 }
 
 //

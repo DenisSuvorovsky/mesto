@@ -25,14 +25,15 @@ const initialCards = [
     }
   ];
 
-const popupElement = document.querySelectorAll('.popup');
+
 //Конструктор шаблона карточки
+
 class Card {
-    constructor (data, templateSelector) {
+    constructor(data, templateSelector) {
     this._name = data.name
     this._link = data.link;
     this._templateSelector = templateSelector;
-    }
+  }
 
     //Клонирования разметки
     _getCardTemplate() {
@@ -44,55 +45,22 @@ class Card {
 
         return template;
     }
-
-    _openPopup() {
-      popup.classList.add('popup_opened');
-      document.addEventListener('keydown', closeByEscBtn);
-  }
-
-    _closePopup(popup) {
-      popup.classList.remove('popup_opened');
-      document.removeEventListener('keydown', closeByEscBtn);
-}
-
-  _closeByEscBtn(evt) {
-    if (evt.key === 'Escape') {
-        const openedPopup = document.querySelector('.popup_opened');
-        closePopup(openedPopup);
-    }
-  }
-
-  _handleLikeClick(evt) {
-    const like = this._element.querySelector('.elements__like');
-    like.classList.toggle('elements__like_active');
-  }
-
-  _setEventListeners(){
-    this._element.querySelector('.elements__like').addEventListener('click', this._handleLikeClick);
-  }
+ 
     
     //Создание карточки
     generateCard() {
-        this._element = this._getCardTemplate();
+        this._element = this._getCardTemplate()
 
         this._element.querySelector('.elements__image').src = this._link;
         this._element.querySelector('.elements__caption').textContent = this._name;
 
         return this._element;
     }
-
-    //Удаление карточки
-    _handleDeleteClick(evt) {
-      const card = evt.target.closest('.elements__card');
-      card.remove();
-    }
-
-    //Добавление/удаление лайка
-    _handleLikeClick(evt) {
-      evt.target.classList.toggle('elements__like_active');
   }
-}
-
+  
+  
+  
+  
 
 //добавление всех карточек в разметку
 initialCards.forEach((item) => {
