@@ -1,4 +1,4 @@
-(function() {
+export default (function() {
   const initialCards = [
     {
       name: "Архыз",
@@ -27,7 +27,7 @@
   ];
   
   //Конструктор шаблона карточки
-  class Card {
+   class Card {
     constructor(data, templateSelector) {
       this._name = data.name;
       this._image = data.link;

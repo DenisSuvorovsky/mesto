@@ -1,4 +1,6 @@
-(function() {
+import Card from "./Card.js";
+
+ (function() {
   const profileEditBtn = document.querySelector('.profile__edit-btn');
   const profileAddBtn = document.querySelector('.profile__add-btn');
   const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -63,7 +65,7 @@
   
       formAddCard.addEventListener('submit', (evt) => {
           evt.preventDefault();
-          addCard(cardName.value, cardSrc.value);
+          generateCard(cardName.value, cardSrc.value);
           closePopup(popupAddNewCard);
           formAddCard.reset();
       });
