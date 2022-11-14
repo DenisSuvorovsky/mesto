@@ -6,7 +6,9 @@ export default(function () {
             this._selectors = data.selectors;
             
         }
-        
+        _showInputError() {
+            
+        }
     }
     
 })();
