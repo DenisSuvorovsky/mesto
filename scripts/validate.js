@@ -1,5 +1,7 @@
+
+
 //Показываем ошибки
-(function() {
+ (function() {
     const showInputError = (formSelector, inputSelector, config) => {
         const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
         errorElement.textContent = inputSelector.validationMessage;

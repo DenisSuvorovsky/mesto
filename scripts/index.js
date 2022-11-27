@@ -1,4 +1,4 @@
-import Card from "./Card.js";
+import { generateCard } from './Card';
 
  (function() {
   const profileEditBtn = document.querySelector('.profile__edit-btn');
@@ -65,7 +65,7 @@ import Card from "./Card.js";
   
       formAddCard.addEventListener('submit', (evt) => {
           evt.preventDefault();
-          this._Card(gene);
+          generateCard();
           closePopup(popupAddNewCard);
           formAddCard.reset();
       });
