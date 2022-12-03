@@ -1,7 +1,5 @@
-
-
 //Показываем ошибки
- (function() {
+
     const showInputError = (formSelector, inputSelector, config) => {
         const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
         errorElement.textContent = inputSelector.validationMessage;
@@ -80,5 +78,3 @@
         inputErrorClass: 'popup__input-error',
         errorClass: 'popup__input-error_active'
     });
-})();
-

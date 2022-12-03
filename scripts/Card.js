@@ -1,4 +1,3 @@
-export default (function() {
   const initialCards = [
     {
       name: "Архыз",
@@ -27,7 +26,7 @@ export default (function() {
   ];
   
   //Конструктор шаблона карточки
-   class Card {
+  export default class Card {
     constructor(data, templateSelector) {
       this._name = data.name;
       this._image = data.link;
@@ -74,11 +73,8 @@ export default (function() {
   //добавление всех карточек в разметку
   initialCards.forEach((item) => {
     const card = new Card(item, ".template");
-  
     const cardElement = card.generateCard();
     const elementsList = document.querySelector(".elements");
-  
     elementsList.prepend(cardElement);
   });
   
-})();
