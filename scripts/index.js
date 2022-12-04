@@ -13,7 +13,7 @@ import  Card  from './Card.js';
   const cardName = formAddCard.querySelector('.popup__input_type_card-name');
   const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
   const popupList = document.querySelectorAll('.popup');
-  const card = new Card(cardName, cardSrc, '.template');
+ 
   
   function handleSubmitProfileEditForm(evt) {
       evt.preventDefault();
@@ -65,7 +65,7 @@ import  Card  from './Card.js';
   
       formAddCard.addEventListener('submit', (evt) => {
           evt.preventDefault();
-          card.generateCard();
+          new Card(cardName, '.template');
           closePopup(popupAddNewCard);
           formAddCard.reset();
       });

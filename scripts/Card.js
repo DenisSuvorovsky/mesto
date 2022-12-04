@@ -28,6 +28,7 @@
   //Конструктор шаблона карточки
   export default class Card {
     constructor(data, templateSelector) {
+      this._data = data;
       this._name = data.name;
       this._image = data.link;
       this._templateSelector = templateSelector;
@@ -35,11 +36,11 @@
   
     _handleLikeClick() {
       this._like.classList.toggle("elements__like_active");
-    }
+    };
   
     _handleDeleteClick() {
       this._element.remove();
-    }
+    };
   
     _setEventListeners() {
       this._like.addEventListener("click", () => {
@@ -47,8 +48,8 @@
       });
         this._element.querySelector('.elements__delete').addEventListener('click', () => {
         this._handleDeleteClick();
-      })
-    }
+      });
+    };
   
     //Клонирования разметки
     _getCardTemplate() {
@@ -57,7 +58,7 @@
         .content.querySelector(".elements__card")
         .cloneNode("true");
       return template;
-    }
+    };
   
     //Создание карточки
     generateCard() {
@@ -68,9 +69,9 @@
       this._setEventListeners();
       return this._element;
     }
-  }
+  };
   
-  //добавление всех карточек в разметку
+  //добавление массива карточек в разметку
   initialCards.forEach((item) => {
     const card = new Card(item, ".template");
     const cardElement = card.generateCard();
