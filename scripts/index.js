@@ -65,7 +65,7 @@ import  Card  from './Card.js';
   
       formAddCard.addEventListener('submit', (evt) => {
           evt.preventDefault();
-          new Card(cardName, '.template');
+          
           closePopup(popupAddNewCard);
           formAddCard.reset();
       });
