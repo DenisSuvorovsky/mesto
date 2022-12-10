@@ -1,5 +1,5 @@
-import  Card  from './Card.js';
-  
+  import  Card  from './Card.js';
+
   const profileEditBtn = document.querySelector('.profile__edit-btn');
   const profileAddBtn = document.querySelector('.profile__add-btn');
   const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -13,7 +13,9 @@ import  Card  from './Card.js';
   const cardName = formAddCard.querySelector('.popup__input_type_card-name');
   const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
   const popupList = document.querySelectorAll('.popup');
- 
+  const elementsList = document.querySelector(".elements");
+  const CardItem = new Card(elementsList, cardName, cardSrc, '.template')
+  //const elementsList = document.querySelector(".elements");
   
   function handleSubmitProfileEditForm(evt) {
       evt.preventDefault();
@@ -65,7 +67,8 @@ import  Card  from './Card.js';
   
       formAddCard.addEventListener('submit', (evt) => {
           evt.preventDefault();
-          
+          CardItem.generateCard();
+          elementsList.prepend(CardItem);
           closePopup(popupAddNewCard);
           formAddCard.reset();
       });

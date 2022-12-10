@@ -27,10 +27,10 @@
   
   //Конструктор шаблона карточки
   export default class Card {
-    constructor(data, templateSelector) {
+    constructor(data, name, link, templateSelector) {
       this._data = data;
-      this._name = data.name;
-      this._image = data.link;
+      this._name = name;
+      this._image = link;
       this._templateSelector = templateSelector;
     }
   
@@ -73,7 +73,7 @@
   
   //добавление массива карточек в разметку
   initialCards.forEach((item) => {
-    const card = new Card(item, ".template");
+    const card = new Card(item, item.name, item.link, ".template");
     const cardElement = card.generateCard();
     const elementsList = document.querySelector(".elements");
     elementsList.prepend(cardElement);
