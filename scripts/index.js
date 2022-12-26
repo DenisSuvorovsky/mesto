@@ -94,7 +94,7 @@ function addEventListeners() {
   });
   formAddCard.addEventListener('submit', (evt) => {   
       evt.preventDefault();
-      addNewCard(cardName.value, cardSrс.value);
+      addNewCard(cardName.value, cardSrc.value);
       closePopup(popupAddNewCard);
       formAddCard.reset();
   });
