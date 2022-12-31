@@ -1,4 +1,6 @@
 import Card from './Card.js';
+import FormValidator from './formValidator.js';
+
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
 const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -13,6 +15,7 @@ const cardName = formAddCard.querySelector('.popup__input_type_card-name');
 const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
+const popupCard = document.querySelector('.popup_type_image');
 const initialCards = [
   {
     name: "Архыз",
@@ -59,7 +62,7 @@ function handleSubmitProfileEditForm (evt) {
   closePopup(popupEditProfile);
 }
 
-function openPopup (popup) {
+export function openPopup (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscBtn);
 }
@@ -87,17 +90,30 @@ function closeByEscBtn (evt) {
     }
 }
 
+function handleCardClick() {
+  elementsList.addEventListener('click', () => {
+    openPopup(popupCard);
+  })
+}
+
 function addEventListeners() {
+
+  elementsList.addEventListener('click', () => {
+    handleCardClick();
+  })
+
   profileAddBtn.addEventListener('click', () => {
       openPopup(popupAddNewCard);
       formAddCard.reset();
   });
+
   formAddCard.addEventListener('submit', (evt) => {   
       evt.preventDefault();
       addNewCard(cardName.value, cardSrc.value);
       closePopup(popupAddNewCard);
       formAddCard.reset();
   });
+
   profileEditBtn.addEventListener('click', () => {      
       openPopup(popupEditProfile);
       nameInput.value = userName.textContent;
