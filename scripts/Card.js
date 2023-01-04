@@ -14,10 +14,6 @@ export default class Card {
      this._element.remove();
    }
 
-  // _handleCardClick() {
-  //   this._image
-  // }
-  
   _setEventListeners() {
     this._like.addEventListener("click", () => {
       this._handleLikeClick();
@@ -25,10 +21,6 @@ export default class Card {
       this._element.querySelector('.elements__delete').addEventListener('click', () => {
       this._handleDeleteClick();
     })
-    
-  //  this._image.addEventListener('click', () => {
-  //    this._handleCardClick();
-  //  })
   }
 
   //Клонирования разметки
@@ -40,7 +32,6 @@ export default class Card {
     return template;
   }
 
-
   //Создание карточки
   generateCard() {
     this._element = this._getCardTemplate();
@@ -51,5 +42,4 @@ export default class Card {
     this._setEventListeners();
     return this._element;
   }
-
 }

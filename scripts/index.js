@@ -1,6 +1,6 @@
 import Card from './Card.js';
-import FormValidator from './formValidator.js';
 
+const imagePopup = document.querySelector('.popup__img');
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
 const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -62,7 +62,7 @@ function handleSubmitProfileEditForm (evt) {
   closePopup(popupEditProfile);
 }
 
-export function openPopup (popup) {
+ function openPopup (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscBtn);
 }
@@ -91,7 +91,7 @@ function closeByEscBtn (evt) {
 }
 
 function handleCardClick() {
-  elementsList.addEventListener('click', () => {
+  cardElement.addEventListener('click', () => {
     openPopup(popupCard);
   })
 }
