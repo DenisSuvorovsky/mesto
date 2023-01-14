@@ -1,6 +1,5 @@
 import Card from './Card.js';
-
-const imagePopup = document.querySelector('.popup__img');
+import initialCards from './initialCards.js';
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
 const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -15,33 +14,7 @@ const cardName = formAddCard.querySelector('.popup__input_type_card-name');
 const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
-const popupCard = document.querySelector('.popup_type_image');
-const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
+const popupCardPrw = document.querySelector('.popup_type_image');
 
 //Добавление карточки
 function addNewCard(name, link) {
@@ -62,7 +35,7 @@ function handleSubmitProfileEditForm (evt) {
   closePopup(popupEditProfile);
 }
 
- function openPopup (popup) {
+function openPopup (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscBtn);
 }
@@ -90,30 +63,17 @@ function closeByEscBtn (evt) {
     }
 }
 
-function handleCardClick() {
-  cardElement.addEventListener('click', () => {
-    openPopup(popupCard);
-  })
-}
-
 function addEventListeners() {
-
-  elementsList.addEventListener('click', () => {
-    handleCardClick();
-  })
-
   profileAddBtn.addEventListener('click', () => {
       openPopup(popupAddNewCard);
       formAddCard.reset();
   });
-
   formAddCard.addEventListener('submit', (evt) => {   
       evt.preventDefault();
       addNewCard(cardName.value, cardSrc.value);
       closePopup(popupAddNewCard);
       formAddCard.reset();
   });
-
   profileEditBtn.addEventListener('click', () => {      
       openPopup(popupEditProfile);
       nameInput.value = userName.textContent;
