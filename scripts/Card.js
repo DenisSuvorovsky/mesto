@@ -1,3 +1,4 @@
+
 //Класс и шаблон карточки
 export default class Card {
     constructor(name, link, templateSelector) {
@@ -12,6 +13,10 @@ export default class Card {
    
      _handleDeleteClick() {
        this._element.remove();
+     }
+
+     _handleCardClick() {
+      this._element.addEventListener('click', openPopup('.popup_type_image'))
      }
      
     //Клонирования разметки

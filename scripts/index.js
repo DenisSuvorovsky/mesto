@@ -14,7 +14,10 @@ const cardName = formAddCard.querySelector('.popup__input_type_card-name');
 const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
-const popupCardPrw = document.querySelector('.popup_type_image');
+const popupCardImage = document.querySelector('.popup_type_image');
+
+//открытие поп-апа с изображением
+
 
 //Добавление карточки
 function addNewCard(name, link) {
@@ -27,7 +30,8 @@ function addNewCard(name, link) {
 initialCards.forEach((item) => {
   addNewCard(item.name, item.link, '.template');
 })
-  
+
+//изменение имении и работы профиля
 function handleSubmitProfileEditForm (evt) {
   evt.preventDefault();
   userName.textContent = nameInput.value;
@@ -35,15 +39,18 @@ function handleSubmitProfileEditForm (evt) {
   closePopup(popupEditProfile);
 }
 
-function openPopup (popup) {
+//открытие поп-апа
+export function openPopup (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscBtn);
 }
 
+//закрытие поп-апа
 function closePopup (popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeByEscBtn);
 }
+
 
 popupList.forEach ((popup) => {
   popup.addEventListener('mousedown', (evt) => {
