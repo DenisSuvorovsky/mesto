@@ -1,5 +1,8 @@
+import FormValidator from './formValidator.js';
+import { cardConfig } from "./constants.js";
+export {openPopup, popupCardImage};
 import Card from './Card.js';
-import initialCards from './initialCards.js';
+import { initialCards, validationConfig } from './constants.js';
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
 const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -15,20 +18,13 @@ const cardSrc = formAddCard.querySelector('.popup__input_type_card-srс');
 const popupList = document.querySelectorAll('.popup');
 const elementsList = document.querySelector('.elements');
 const popupCardImage = document.querySelector('.popup_type_image');
+const viewPopupImage = popupCardImage.querySelector('.popup__img');
+const viewPopupName = popupCardImage.querySelector('.popup__caption');
 
-//открытие поп-апа с изображением
-
-
-//Добавление карточки
-function addNewCard(name, link) {
-  const card = new Card(name, link, '.template');
-  const cardElement = card.generateCard();
-  elementsList.prepend(cardElement);
-} 
-
-//добавление массива карточек в разметку
-initialCards.forEach((item) => {
-  addNewCard(item.name, item.link, '.template');
+const validators = {};
+Array.from(document.forms).forEach((form) => {
+  validators[form.id] = new FormValidator(validationConfig, form);
+  validators[form.id].enableValidation();
 })
 
 //изменение имении и работы профиля
@@ -40,7 +36,7 @@ function handleSubmitProfileEditForm (evt) {
 }
 
 //открытие поп-апа
-export function openPopup (popup) {
+function openPopup (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscBtn);
 }
@@ -50,6 +46,28 @@ function closePopup (popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeByEscBtn);
 }
+
+
+//открытие поп-апа с изображением
+function openViewPopup(card) {
+  const {name, link} = card;
+  viewPopupImage.src = link;
+  viewPopupImage.alt = name;
+  viewPopupName.textContent = name;
+  openPopup(popupCardImage);
+}
+
+//Добавление карточки
+function addNewCard(name, link) {
+  const card = new Card({ name, link }, '.template', cardConfig, { openImageHandler: openViewPopup });
+  const cardElement = card.generateCard();
+  elementsList.prepend(cardElement);
+} 
+
+//добавление массива карточек в разметку
+initialCards.forEach((item) => {
+  addNewCard(item.name, item.link, '.template');
+})
 
 
 popupList.forEach ((popup) => {
