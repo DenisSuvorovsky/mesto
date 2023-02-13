@@ -1,8 +1,8 @@
 import FormValidator from './formValidator.js';
 import { cardConfig } from "./constants.js";
-export {openPopup, popupCardImage};
 import Card from './Card.js';
 import { initialCards, validationConfig } from './constants.js';
+
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
 const popupEditProfile = document.querySelector('.popup_type_edit');
@@ -90,8 +90,10 @@ function closeByEscBtn (evt) {
 
 function addEventListeners() {
   profileAddBtn.addEventListener('click', () => {
-      openPopup(popupAddNewCard);
       formAddCard.reset();
+      validators[formAddCard.id].validateForm();
+      openPopup(popupAddNewCard);
+      
   });
   formAddCard.addEventListener('submit', (evt) => {   
       evt.preventDefault();

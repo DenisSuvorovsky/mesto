@@ -2,7 +2,6 @@
   width: 358px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-top: 35px;
   box-sizing: border-box;
   padding-bottom: 13px;
   outline: none;
@@ -10,18 +9,8 @@
   line-height: 17px;
 }
 
-
-
 @media screen and (max-width: 767px) {
   .popup__input {
     max-width: 238px;
   }
-}
-
-.popup__input:valid {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.popup__input:invalid {
-  border-bottom: 1px solid red;
 }

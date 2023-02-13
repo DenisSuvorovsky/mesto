@@ -29,8 +29,8 @@ export const initialCards = [
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__submit',
   inactiveButtonClass: 'popup__submit_disabled',
-  inputErrorClass: 'popup__input-error',
-  errorClass: 'popup__input-error_active'
+  inputErrorClass: 'popup__input_invalid',
+  errorClass: 'popup__input-error_active',
 };
 
 export const cardConfig = {

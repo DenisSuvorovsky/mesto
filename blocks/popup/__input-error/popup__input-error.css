@@ -1,11 +1,10 @@
 .popup__input-error {
-    opacity: 0;
     color: red;
-    display: block;
+    display: flex;
     font-size: 12px;
     max-width: 356px;
     padding: 5px 0 0;
-    position: absolute;
-    white-space: nowrap;
+    position: relative;
+    min-height: 22px;
 }
 
