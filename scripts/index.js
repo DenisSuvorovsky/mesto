@@ -64,11 +64,14 @@ function addNewCard(name, link) {
   elementsList.prepend(cardElement);
 } 
 
+function addToHTML(cardElement) {
+  elementsList.prepend({cardElement});
+}
+
 //добавление массива карточек в разметку
 initialCards.forEach((item) => {
   addNewCard(item.name, item.link, '.template');
 })
-
 
 popupList.forEach ((popup) => {
   popup.addEventListener('mousedown', (evt) => {
@@ -89,24 +92,30 @@ function closeByEscBtn (evt) {
 }
 
 function addEventListeners() {
+
   profileAddBtn.addEventListener('click', () => {
+      openPopup(popupAddNewCard);
       formAddCard.reset();
       validators[formAddCard.id].validateForm();
-      openPopup(popupAddNewCard);
       
+
   });
+
   formAddCard.addEventListener('submit', (evt) => {   
+      closePopup(popupAddNewCard);
       evt.preventDefault();
       addNewCard(cardName.value, cardSrc.value);
-      closePopup(popupAddNewCard);
       formAddCard.reset();
   });
+
   profileEditBtn.addEventListener('click', () => {      
       openPopup(popupEditProfile);
       nameInput.value = userName.textContent;
       jobInput.value = userJob.textContent;
   });
-    formEditProfile.addEventListener('submit', handleSubmitProfileEditForm);
+
+  formEditProfile.addEventListener('submit', handleSubmitProfileEditForm);
+
 }
 
 addEventListeners();
