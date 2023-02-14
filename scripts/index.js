@@ -64,9 +64,6 @@ function addNewCard(name, link) {
   elementsList.prepend(cardElement);
 } 
 
-function addToHTML(cardElement) {
-  elementsList.prepend({cardElement});
-}
 
 //добавление массива карточек в разметку
 initialCards.forEach((item) => {
