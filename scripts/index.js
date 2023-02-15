@@ -45,7 +45,7 @@ function openPopup (popup) {
 function closePopup (popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeByEscBtn);
-}
+};
 
 
 //открытие поп-апа с изображением
@@ -55,20 +55,19 @@ function openViewPopup(card) {
   viewPopupImage.alt = name;
   viewPopupName.textContent = name;
   openPopup(popupCardImage);
-}
+};
 
 //Добавление карточки
 function addNewCard(name, link) {
   const card = new Card({ name, link }, '.template', cardConfig, { openImageHandler: openViewPopup });
   const cardElement = card.generateCard();
   elementsList.prepend(cardElement);
-} 
-
+};
 
 //добавление массива карточек в разметку
 initialCards.forEach((item) => {
   addNewCard(item.name, item.link, '.template');
-})
+});
 
 popupList.forEach ((popup) => {
   popup.addEventListener('mousedown', (evt) => {
@@ -79,14 +78,14 @@ popupList.forEach ((popup) => {
           closePopup(popup);
       };
   });
-})
+});
 
 function closeByEscBtn (evt) {
     if (evt.key === 'Escape') {
         const openedPopup = document.querySelector('.popup_opened');
         closePopup(openedPopup);
     }
-}
+};
 
 function addEventListeners() {
 
@@ -94,8 +93,6 @@ function addEventListeners() {
       openPopup(popupAddNewCard);
       formAddCard.reset();
       validators[formAddCard.id].validateForm();
-      
-
   });
 
   formAddCard.addEventListener('submit', (evt) => {   
@@ -113,6 +110,6 @@ function addEventListeners() {
 
   formEditProfile.addEventListener('submit', handleSubmitProfileEditForm);
 
-}
+};
 
 addEventListeners();

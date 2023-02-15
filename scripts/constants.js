@@ -39,11 +39,11 @@ export const cardConfig = {
   imageSelector: '.elements__image',
   captionSelector: '.elements__caption',
   activeLikeClass: 'elements__like_active'
-}
+};
 
 export const basePopupConfig = {
   closeButtonSelector: '.popup__close-button',
   activePopupClass: 'popup_opened'
-}
+};
 
-export const ESC_KEY = 'Escape'
+export const ESC_KEY = 'Escape';
