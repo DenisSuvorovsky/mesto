@@ -1,6 +1,6 @@
-import FormValidator from './formValidator.js';
+import FormValidator from './components/formValidator.js';
 import { cardConfig } from "./constants.js";
-import Card from './Card.js';
+import Card from './components/Card.js';
 import { initialCards, validationConfig } from './constants.js';
 
 const profileEditBtn = document.querySelector('.profile__edit-btn');
@@ -21,6 +21,7 @@ const popupCardImage = document.querySelector('.popup_type_image');
 const viewPopupImage = popupCardImage.querySelector('.popup__img');
 const viewPopupName = popupCardImage.querySelector('.popup__caption');
 
+//валидация поп-апов
 const validators = {};
 Array.from(document.forms).forEach((form) => {
   validators[form.id] = new FormValidator(validationConfig, form);
@@ -61,14 +62,15 @@ function openViewPopup(card) {
 function addNewCard(name, link) {
   const card = new Card({ name, link }, '.template', cardConfig, { openImageHandler: openViewPopup });
   const cardElement = card.generateCard();
-  elementsList.prepend(cardElement);
+  return cardElement;
 };
 
 //добавление массива карточек в разметку
 initialCards.forEach((item) => {
-  addNewCard(item.name, item.link, '.template');
+  elementsList.prepend(addNewCard(item.name, item.link));
 });
 
+//закрытие нажатием на оверлей
 popupList.forEach ((popup) => {
   popup.addEventListener('mousedown', (evt) => {
       if (evt.target.classList.contains('popup_opened')) {
@@ -80,6 +82,7 @@ popupList.forEach ((popup) => {
   });
 });
 
+//закрытие нажатием на Esc
 function closeByEscBtn (evt) {
     if (evt.key === 'Escape') {
         const openedPopup = document.querySelector('.popup_opened');
@@ -87,6 +90,7 @@ function closeByEscBtn (evt) {
     }
 };
 
+//слушатели событий
 function addEventListeners() {
 
   profileAddBtn.addEventListener('click', () => {
@@ -98,7 +102,7 @@ function addEventListeners() {
   formAddCard.addEventListener('submit', (evt) => {   
       closePopup(popupAddNewCard);
       evt.preventDefault();
-      addNewCard(cardName.value, cardSrc.value);
+      elementsList.prepend(addNewCard(cardName.value, cardSrc.value));
       formAddCard.reset();
   });
 

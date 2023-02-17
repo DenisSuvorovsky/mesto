@@ -1,4 +1,4 @@
-import { ESC_KEY } from "./constants.js";
+import { ESC_KEY } from "../constants.js";
 export default class Popup {
     constructor(popupSelector, { closeButtonSelector, activePopupClass }){
         this._popupElement = document.querySelector(popupSelector);
