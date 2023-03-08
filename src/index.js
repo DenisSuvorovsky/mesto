@@ -1,7 +1,7 @@
-import FormValidator from './components/formValidator.js';
-import { cardConfig } from "./constants.js";
-import Card from './components/Card.js';
-import { initialCards, validationConfig } from './constants.js';
+import FormValidator from '../scripts/components/formValidator.js';
+import { cardConfig } from "../scripts/constants.js";
+import Card from '../scripts/components/Card.js';
+import { initialCards, validationConfig } from '../scripts/constants.js';
 
 const profileEditBtn = document.querySelector('.profile__edit-btn');
 const profileAddBtn = document.querySelector('.profile__add-btn');
